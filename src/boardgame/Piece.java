@@ -7,24 +7,16 @@ public class Piece {
 	public Piece() {
 	}
 
-	public Piece(Position position, Board board) {
-		setPosition(position);
+	public Piece(Board board) {
 		setBoard(board);
+		position = null;
 	}
 
-	public Position getPosition() {
-		return position;
-	}
-
-	public void setPosition(Position position) {
-		this.position = position;
-	}
-
-	public Board getBoard() {
+	protected Board getBoard() {
 		return board;
 	}
 
-	public void setBoard(Board board) {
+	private void setBoard(Board board) {
 		this.board = board;
 	}
 
