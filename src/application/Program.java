@@ -18,7 +18,7 @@ public class Program {
 		while (true) {
 			try {
 				UI.clearScreen();
-				UI.printBoard(cheassMatch.getPieces());
+				UI.printMatch(cheassMatch);
 				System.out.println();
 				System.out.print("Source: ");
 				ChessPosition source = UI.readChessPosition(sc);
@@ -26,7 +26,7 @@ public class Program {
 				boolean[][] possibleMoves = cheassMatch.possibleMoves(source);
 				UI.clearScreen();
 				UI.printBoard(cheassMatch.getPieces(), possibleMoves);
-				
+
 				System.out.println();
 				System.out.print("Target: ");
 				ChessPosition target = UI.readChessPosition(sc);
